@@ -1,0 +1,1 @@
+There are parts of qr-codes on the frames of the gif, if you peice these together you can get 3 different qr-codes. One is a decoy but the other two are parts of the flag

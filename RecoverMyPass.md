@@ -1,0 +1,7 @@
+if we use strings on the bin we can see that the upx was used to pack the software. we'll unpack it first as it is easier to view in reverse engineering tools this way. after running it the program crashes.
+
+if we see the assembly code of the bin we see that in the main at the beginning there is this ud2 command which causes the program to crash. If we continue with code the rest of the code will apear in ghidra and if we go towards the end of the main we can see registers are popping one by one. almost in every case at the beginning of the function registers are being pushed, let's push the last register that was popped to see if our program works, it works!!!!
+
+from now on it is easier, although the code looks super scary in reality it is not that scary. From the looks of it this code is doing some obfuscation to get some character values and checks them with the user input. We have to options either we can reverse engineer the whole process to find the correct input or we can use gdb to break at each if statement to see what the program is actually expecting. The latter one is easier for me.
+
+after doing that and writing each character at the correct location we come to this user input: "FeQ92R9dD2O8fnyP", which if we give it to the program it will print the flag for us.

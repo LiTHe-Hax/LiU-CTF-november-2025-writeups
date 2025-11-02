@@ -1,0 +1,1 @@
+Each packet contains one UTF-8 encoded character translated to binary, if you translate every packet back to its corresponding character and read the packets from top to bottom, that will be the flag.
